@@ -8,7 +8,7 @@
   "license": "ISC",
   "scripts": {
     "start": "webpack && node server",
-    "dev": "node server & webpack --watch",
+    "dev": "node server && webpack --watch",
     "test": "jest --watchAll"
   },
   "babel": {

@@ -18,13 +18,13 @@ const testblog = [
   }
 ]
 
-function showBlog(testblog) {
+function showBlog(blog) {
   return (
-    <Blogbox key={testblog.title}
-      title={testblog.title}
-      date={testblog.date}
-      content={testblog.content}
-      image={testblog.image}
+    <Blogbox key={blog.title}
+      title={blog.title}
+      date={blog.date}
+      content={blog.content}
+      image={blog.image}
     />
   )
 }
@@ -35,7 +35,9 @@ const App = () => {
     <div classname='container'>
       <h1>Rob's Blog v1.0</h1>
       <Blogbox />
-      {testblog.map(showBlog)}
+      {testblog.map(element => {
+        return showBlog(element);
+      })}
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Content from './Content'
 import Image from './Image'
 
 const Blogbox = props => {
+  return(
   <div className='blogwrapper'>
 
     <Header title={props.title} date={props.date} />
@@ -18,6 +19,7 @@ const Blogbox = props => {
     </div>
 
   </div>
+  )
 }
 
 export default Blogbox
