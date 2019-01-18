@@ -11,7 +11,7 @@ const testblog = [
     image: './images/download.jpg'
   },
   {
-    title: 'Title two',
+    title: 'Title two point five',
     date: '78/90/12',
     content: 'blah blah blah',
     image: './images/download.jpg'
@@ -22,24 +22,29 @@ const testblog = [
 
 const App = () => {
   
-  showBlog(blog) {
-    return (
-      <Blogbox key={blog.title}
-        title={blog.title}
-        date={blog.date}
-        content={blog.content}
-        image={blog.image}
-      />
-    )
-  }
+  // showBlog(blog) {
+  //   return (
+  //     <Blogbox key={blog.title}
+  //       title={blog.title}
+  //       date={blog.date}
+  //       content={blog.content}
+  //       image={blog.image}
+  //     />
+  //   )
+  // }
 
   return (
 
     <div classname='container'>
       <h1>Rob's Blog v1.0</h1>
-      <Blogbox />
-      {testblog.map(element => {
-        return showBlog(element);
+      
+      {testblog.map(blog => {
+        return  <Blogbox key={blog.title}
+        title={blog.title}
+        date={blog.date}
+        content={blog.content}
+        image={blog.image}
+      />;
       })}
     </div>
   )
