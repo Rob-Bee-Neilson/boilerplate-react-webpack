@@ -8,13 +8,13 @@ const testblog = [
     title: 'Title one',
     date: '12/34/56',
     content: 'aah ahh aah',
-    image: './images/download.jpg'
+    image: '/images/download.jpg'
   },
   {
     title: 'Title two point five',
     date: '78/90/12',
     content: 'blah blah blah',
-    image: './images/download.jpg'
+    image: '/images/download.jpg'
   }
 ]
 
@@ -35,7 +35,7 @@ const App = () => {
 
   return (
 
-    <div classname='container'>
+    <div className='container'>
       <h1>Rob's Blog v1.0</h1>
       
       {testblog.map(blog => {
