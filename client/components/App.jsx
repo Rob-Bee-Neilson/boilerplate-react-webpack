@@ -14,7 +14,7 @@ const testblog = [
     title: 'Title two point five',
     date: '78/90/12',
     content: 'blah blah blah',
-    image: '/images/download.jpg'
+    image: '/images/download2.jpg'
   }
 ]
 
