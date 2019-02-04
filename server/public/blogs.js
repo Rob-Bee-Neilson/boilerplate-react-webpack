@@ -4,7 +4,7 @@ module.exports = [
         keyword: 'robbie',
         title: 'Title one',
         date: '12/34/56',
-        entry: 'aah ahh aah',
+        content: 'aah ahh aah',
         image: '/images/download.jpg'
       },
       {
@@ -12,7 +12,7 @@ module.exports = [
         keyword: 'baby',
         title: 'Title two',
         date: '23/45/67',
-        entry: 'b b b b b ',
+        content: 'b b b b b ',
         image: '/images/download2.jpg'
       },
       {
@@ -20,7 +20,7 @@ module.exports = [
         keyword: 'robbie',
         title: 'Title three',
         date: '45/67/89',
-        entry: 'c c c c c c',
+        content: 'c c c c c c',
         image: '/images/download.jpg'
       }
 ]
