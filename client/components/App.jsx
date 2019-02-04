@@ -58,7 +58,7 @@ const App = () => {
     <div className='container'>
       <h1>Rob's Blog v1.0</h1>
 
-      {console.log('blogs')}
+      {console.log({blogs})}
       
       {testblog.map(blog => {
         return  <Blogbox key={blog.title}
