@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Blogbox from './Blogbox';
-import Header from './Header';
+import Blogbox from './Blogbox'
+import Header from './Header'
 
 import blogs from '../../server/public/blogs'
 
 
 // App to take props?
-const App = (props) => {
+const App = () => {
+
   
  function sortBlogs() {
   
@@ -19,8 +20,7 @@ const App = (props) => {
   return (
     <div className='container'>
       <h1>Rob's Blog v1.0</h1>
-
-      <Header />
+      <p>wazzup</p>
                   
       {sortBlogs().map(blog => {
         return  <Blogbox key={blog.title}

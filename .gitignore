@@ -1,4 +1,6 @@
 node_modules
 static
 npm-debug.log
+public/bundle.*
+*.sqlite3
 bundle.*

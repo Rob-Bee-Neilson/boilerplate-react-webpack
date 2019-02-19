@@ -3,10 +3,9 @@ import React from 'react';
 const Header = props => (
 
   <div className='boarder'>
-    <p>Hi</p>
-    {/* <span className='main-header'>{props.title}</span>
+    <span className='main-header'>{props.title}</span>
     <br></br>
-    <span className='date'>{props.date}</span> */}
+    <span className='date'>{props.date}</span>
   </div>
 
 )
