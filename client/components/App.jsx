@@ -7,14 +7,19 @@ import Filterbox from './Filterbox';
 
 
 // App to take props?
-const App = (props) => {
-  const update = props
-  console.log('getting props as ', update)
+const App = () => {
+  // const update = props
+  // console.log('getting props as ', update)
 
  //create filterBlogs function here
- function filterBlogs(update) {
-   console.log('filterBlogs says ', update)
- } 
+  function filterBlogs(props) {
+    let update = props
+    //console.log('filterBlogs says ', update.keyword)
+    let selectList = sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword)
+    console.log(selectList)
+    return selectList
+    //console.log('to print ', sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword))
+  }
 
  function sortBlogs() {
   
@@ -29,7 +34,6 @@ const App = (props) => {
       <p>wazzup<br></br></p>
       <Filterbox filterBlogs={filterBlogs}/>
 
-      
       {sortBlogs().map(blog => {
         return  <Blogbox key={blog.title}
         keyword={blog.keyword}
