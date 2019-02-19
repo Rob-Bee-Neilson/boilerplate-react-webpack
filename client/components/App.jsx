@@ -1,16 +1,21 @@
 import React from 'react'
 
-import Blogbox from './Blogbox'
-import Header from './Header'
-
 import blogs from '../../server/public/blogs'
+
+import Blogbox from './Blogbox'
 import Filterbox from './Filterbox';
 
 
 // App to take props?
-const App = () => {
+const App = (props) => {
+  const update = props
 
-  
+ //create filterBlogs function here
+ function filterBlogs(update) {
+   console.log(update)
+   
+ } 
+
  function sortBlogs() {
   
     let arr= blogs.reverse();
@@ -22,8 +27,9 @@ const App = () => {
     <div className='container'>
       <h1>Rob's Blog v1.0</h1>
       <p>wazzup<br></br></p>
-      <Filterbox />
-                  
+      <Filterbox keyword={update.keyword}/>
+
+      {filterBlogs()}         
       {sortBlogs().map(blog => {
         return  <Blogbox key={blog.title}
         keyword={blog.keyword}
