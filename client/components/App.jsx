@@ -9,11 +9,11 @@ import Filterbox from './Filterbox';
 // App to take props?
 const App = (props) => {
   const update = props
+  console.log('getting props as ', update)
 
  //create filterBlogs function here
  function filterBlogs(update) {
-   console.log(update)
-   
+   console.log('filterBlogs says ', update)
  } 
 
  function sortBlogs() {
@@ -27,9 +27,9 @@ const App = (props) => {
     <div className='container'>
       <h1>Rob's Blog v1.0</h1>
       <p>wazzup<br></br></p>
-      <Filterbox keyword={update.keyword}/>
+      <Filterbox filterBlogs={filterBlogs}/>
 
-      {filterBlogs()}         
+      
       {sortBlogs().map(blog => {
         return  <Blogbox key={blog.title}
         keyword={blog.keyword}
@@ -39,6 +39,7 @@ const App = (props) => {
         image={blog.image}
       />;
       })}
+      
     </div>
   )
 }

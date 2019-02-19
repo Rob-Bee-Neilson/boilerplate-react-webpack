@@ -7,8 +7,10 @@ export default class Filterbox extends React.Component {
         this.state = {
             keyword: 'default'
         }
+        
         this.onSubmit = this.onSubmit.bind(this)
         this.updateDetails = this.updateDetails.bind(this)
+        
     }
 
     //update details function
@@ -25,15 +27,16 @@ export default class Filterbox extends React.Component {
         onSubmit(e) {
             e.preventDefault()
             const kword = this.state
+            console.log('onsubmitting ', kword)
             this.props.filterBlogs(kword)
         }
 
     render() {
         return(
-            <form>
-                <label onSubmit={this.onSubmit}>
-                    Enter keyword:
-                    <input type="text" name="keyword" placeholder="write stuff here"/>
+            <form onSubmit={this.onSubmit}>
+                <label>
+                    {/* Enter keyword: */}
+                    <input onChange={this.updateDetails} type="text" name="keyword" placeholder="enter keyword"/>
                 </label>
                     <input type="submit" value="Submit" />
             </form>
