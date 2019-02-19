@@ -26,7 +26,7 @@ module.exports = [
       {
         id: 4,
         keyword: 'baby',
-        title: 'Title one',
+        title: 'Title 4',
         date: '12/34/56',
         content: 'aah ahh aah',
         image: '/images/download.jpg'
@@ -34,7 +34,7 @@ module.exports = [
       {
         id: 5,
         keyword: 'baby',
-        title: 'Title two',
+        title: 'Title 5',
         date: '23/45/67',
         content: 'b b b b b ',
         image: '/images/download2.jpg'
@@ -42,7 +42,7 @@ module.exports = [
       {
         id: 6,
         keyword: 'family',
-        title: 'Title three',
+        title: 'Title 6',
         date: '45/67/89',
         content: 'c c c c c c',
         image: '/images/download.jpg'
@@ -50,7 +50,7 @@ module.exports = [
       {
         id: 7,
         keyword: 'robbie',
-        title: 'Title one',
+        title: 'Title 7',
         date: '12/34/56',
         content: 'aah ahh aah',
         image: '/images/download.jpg'
@@ -58,7 +58,7 @@ module.exports = [
       {
         id: 8,
         keyword: 'family',
-        title: 'Title two',
+        title: 'Title 8',
         date: '23/45/67',
         content: 'b b b b b ',
         image: '/images/download2.jpg'
@@ -66,7 +66,7 @@ module.exports = [
       {
         id: 9,
         keyword: 'family',
-        title: 'Title three',
+        title: 'Title 9',
         date: '45/67/89',
         content: 'c c c c c c',
         image: '/images/download.jpg'

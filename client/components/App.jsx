@@ -4,6 +4,7 @@ import Blogbox from './Blogbox'
 import Header from './Header'
 
 import blogs from '../../server/public/blogs'
+import Filterbox from './Filterbox';
 
 
 // App to take props?
@@ -20,7 +21,8 @@ const App = () => {
   return (
     <div className='container'>
       <h1>Rob's Blog v1.0</h1>
-      <p>wazzup</p>
+      <p>wazzup<br></br></p>
+      <Filterbox />
                   
       {sortBlogs().map(blog => {
         return  <Blogbox key={blog.title}
