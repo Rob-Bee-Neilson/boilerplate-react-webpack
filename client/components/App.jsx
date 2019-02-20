@@ -11,7 +11,15 @@ const App = () => {
   // const update = props
   // console.log('getting props as ', update)
 
- //create filterBlogs function here
+
+  function sortBlogs() {
+  
+    let arr= blogs.reverse();
+    return arr
+    
+  }
+
+  //create filterBlogs function here
   function filterBlogs(props) {
     let update = props
     //console.log('filterBlogs says ', update.keyword)
@@ -21,12 +29,7 @@ const App = () => {
     //console.log('to print ', sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword))
   }
 
- function sortBlogs() {
-  
-    let arr= blogs.reverse();
-    
-    return arr
-  }
+  //new function to display holder image or blogs (after keyword submit) here
 
   return (
     <div className='container'>
