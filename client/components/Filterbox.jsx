@@ -19,7 +19,7 @@ export default class Filterbox extends React.Component {
             const value = e.target.value
             const obj = {[key]: value}
             this.setState(obj)
-            //console.log(obj)
+            console.log(obj)
         }
 
 

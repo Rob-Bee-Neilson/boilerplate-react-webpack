@@ -16,8 +16,9 @@ class App extends React.Component {
       }
 
     //this.Blogbox = this.Blogbox.bind(this)
-    this.filterBlogs = this.filterBlogs.bind(this)
-    this.sortBlogs = this.sortBlogs.bind(this)
+    this.filterBlogs = this.filterBlogs.bind(this);
+    this.sortBlogs = this.sortBlogs.bind(this);
+    this.showBlogs = this.showBlogs.bind(this)
 
   }
 
@@ -32,11 +33,29 @@ class App extends React.Component {
   //create filterBlogs function here
   filterBlogs(props) {
     let update = props
-    //console.log('filterBlogs says ', update.keyword)
+    console.log('filterBlogs says ', update.keyword)
     let selectList = this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword)
     console.log(selectList)
+    console.log(selectList[0].keyword)
+    this.setState({keyword: selectList[0].keyword})
+    console.log(this.state)
     return selectList
     //console.log('to print ', sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword))
+  }
+
+  //display nothing unless text entered in Filterbox
+  showBlogs() {
+    return(
+      this.filterBlogs().map(blog => {
+        return  <Blogbox key={blog.title}
+        keyword={blog.keyword}
+        title={blog.title}
+        date={blog.date}
+        content={blog.content}
+        image={blog.image}
+        />;
+      })
+    )
   }
 
   //new function to display holder image or blogs (after keyword submit) here
@@ -47,15 +66,8 @@ class App extends React.Component {
         <p>wazzup<br></br></p>
         <Filterbox filterBlogs={this.filterBlogs}/>
 
-        {this.sortBlogs().map(blog => {
-          return  <Blogbox key={blog.title}
-          keyword={blog.keyword}
-          title={blog.title}
-          date={blog.date}
-          content={blog.content}
-          image={blog.image}
-        />;
-        })}
+        {this.state.keyword === 'default' && console.log('yus')}
+        {this.state.keyword !== 'default' && console.log('yusssss')}
         
       </div>
     )
