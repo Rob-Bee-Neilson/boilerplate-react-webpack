@@ -1,9 +1,11 @@
 import React from 'react'
 
-import blogs from '../../server/public/blogs'
+import blogs from '../../server/public/blogs';
+
 
 import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
+import Catpic from './Catpic';
 
 
 
@@ -35,10 +37,8 @@ class App extends React.Component {
     let update = props
     console.log('filterBlogs says ', update.keyword)
     let selectList = this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword)
-    console.log(selectList)
-    console.log(selectList[0].keyword)
+    console.log(selectList, selectList[0].keyword)
     this.setState({keyword: selectList[0].keyword})
-    console.log(this.state)
     return selectList
     //console.log('to print ', sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword))
   }
@@ -46,7 +46,7 @@ class App extends React.Component {
   //display nothing unless text entered in Filterbox
   showBlogs() {
     return(
-      this.filterBlogs().map(blog => {
+      this.filterBlogs(this.state).map(blog => {
         return  <Blogbox key={blog.title}
         keyword={blog.keyword}
         title={blog.title}
@@ -66,8 +66,8 @@ class App extends React.Component {
         <p>wazzup<br></br></p>
         <Filterbox filterBlogs={this.filterBlogs}/>
 
-        {this.state.keyword === 'default' && console.log('yus')}
-        {this.state.keyword !== 'default' && console.log('yusssss')}
+        {this.state.keyword === 'default' && <Catpic />}
+        {this.state.keyword !== 'default' && this.showBlogs()}
         
       </div>
     )
