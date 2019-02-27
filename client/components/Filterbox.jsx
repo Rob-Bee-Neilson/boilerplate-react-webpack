@@ -28,7 +28,7 @@ export default class Filterbox extends React.Component {
             e.preventDefault()
             const kword = this.state
             console.log('onsubmitting ', kword)
-            this.props.filterBlogs(kword)
+            this.props.updateState(kword)
         }
 
     render() {

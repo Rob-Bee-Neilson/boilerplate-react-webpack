@@ -14,11 +14,11 @@ class App extends React.Component {
     super(props)
 
       this.state = {
-          keyword: 'default'
+        keyword: 'default'
       }
 
     //this.Blogbox = this.Blogbox.bind(this)
-    this.filterBlogs = this.filterBlogs.bind(this);
+    this.updateState = this.updateState.bind(this);
     this.sortBlogs = this.sortBlogs.bind(this);
     this.showBlogs = this.showBlogs.bind(this)
 
@@ -32,21 +32,22 @@ class App extends React.Component {
     
   }
 
-  //create filterBlogs function here
-  filterBlogs(props) {
-    let update = props
-    console.log('filterBlogs says ', update.keyword)
-    let selectList = this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword)
-    console.log(selectList, selectList[0].keyword)
-    this.setState({keyword: selectList[0].keyword})
-    return selectList
-    //console.log('to print ', sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === update.keyword))
+  //update the state from filterbox
+  updateState(props) {
+
+    // let update = props;
+    // let dflt = {keyword: 'default'};
+    // (update.keyword == blogs.object.keyword) ? this.setState({keyword: update.keyword}) : this.setState(dflt)
+    this.setState({keyword: props.keyword})
+        
   }
 
-  //display nothing unless text entered in Filterbox
+  //new state renders this
   showBlogs() {
+
     return(
-      this.filterBlogs(this.state).map(blog => {
+      
+      this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
         return  <Blogbox key={blog.title}
         keyword={blog.keyword}
         title={blog.title}
@@ -55,7 +56,9 @@ class App extends React.Component {
         image={blog.image}
         />;
       })
+
     )
+
   }
 
   //new function to display holder image or blogs (after keyword submit) here
@@ -64,7 +67,7 @@ class App extends React.Component {
       <div className='container'>
         <h1>Rob's Blog v1.0</h1>
         <p>wazzup<br></br></p>
-        <Filterbox filterBlogs={this.filterBlogs}/>
+        <Filterbox updateState={this.updateState}/>
 
         {this.state.keyword === 'default' && <Catpic />}
         {this.state.keyword !== 'default' && this.showBlogs()}
