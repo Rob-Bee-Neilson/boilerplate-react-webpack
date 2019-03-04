@@ -46,22 +46,20 @@ class App extends React.Component {
   //test for props.keyword matching blogs objects.keyword
   checkKeyword(arr, search) {
     
-    let found = null
+    let found = false
     const propsKey = Object.keys(search)[0]
+        
     arr.forEach(function(item){
-      const itemKey = Object.keys(item)[0]
-      if (itemKey === propsKey && item[propsKey] === search[propsKey]) {
-        found = item
+      const itemKey = Object.keys(item)[1]
+      
+      if (itemKey === propsKey && item[itemKey] === search[propsKey]) 
+      {
+        found = true
       }
+      console.log('Keyword matches', found)
     })
 
-    if (found = !null)
-      {check = true}
-      else {check = false}
-
-      console.log(check)
-
-      return check
+    
 
   }
 
@@ -70,7 +68,7 @@ class App extends React.Component {
 
     return(
       
-      if (this.checkKeyword(blogs, this.state) =
+      
 
       this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
         return  <Blogbox key={blog.title}
@@ -96,6 +94,7 @@ class App extends React.Component {
 
         {this.state.keyword === 'default' && <Catpic />}
         {this.state.keyword !== 'default' && this.showBlogs()}
+        {this.checkKeyword(blogs,this.state)}
                 
       </div>
     )
