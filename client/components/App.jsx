@@ -57,6 +57,7 @@ class App extends React.Component {
         found = true
       }
       console.log('Keyword matches', found)
+      return found
     })
 
     
@@ -65,36 +66,50 @@ class App extends React.Component {
 
   //new state renders this
   showBlogs() {
+    
+    if (this.checkKeyword(blogs, this.state) == true)
+      {
+        console.log('checkKeyword sez true')
+        return(
+        
+          this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
+            return  <Blogbox key={blog.title}
+            keyword={blog.keyword}
+            title={blog.title}
+            date={blog.date}
+            content={blog.content}
+            image={blog.image}
+            />;
+          })
 
-    return(
-      
-      
-
-      this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
-        return  <Blogbox key={blog.title}
-        keyword={blog.keyword}
-        title={blog.title}
-        date={blog.date}
-        content={blog.content}
-        image={blog.image}
-        />;
-      })
-
-    )
+        )
+      }
+    else
+        {
+          return(
+            <div>
+              <Catpic />
+            </div>
+          )
+        }
 
   }
 
   //new function to display holder image or blogs (after keyword submit) here
   render() {
+
+
+
     return (
       <div className='container'>
         <h1>Rob's Blog v1.0</h1>
         <p>wazzup<br></br></p>
         <Filterbox updateState={this.updateState}/>
 
-        {this.state.keyword === 'default' && <Catpic />}
-        {this.state.keyword !== 'default' && this.showBlogs()}
-        {this.checkKeyword(blogs,this.state)}
+        {/* {this.state.keyword === 'default' && <Catpic />} */}
+        {/* {this.state.keyword !== 'default' && this.showBlogs()} */}
+        {this.showBlogs()}
+        
                 
       </div>
     )
