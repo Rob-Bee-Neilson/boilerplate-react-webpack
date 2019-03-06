@@ -54,44 +54,55 @@ class App extends React.Component {
       
       if (itemKey === propsKey && item[itemKey] === search[propsKey]) 
       {
-        found = true
+        found = true;
       }
       console.log('Keyword matches', found)
-      return found
+      
     })
 
-    
+    return found
 
   }
 
   //new state renders this
   showBlogs() {
     
-    if (this.checkKeyword(blogs, this.state) == true)
-      {
-        console.log('checkKeyword sez true')
-        return(
+    return(
+    this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
+              return  <Blogbox key={blog.title}
+              keyword={blog.keyword}
+              title={blog.title}
+              date={blog.date}
+              content={blog.content}
+              image={blog.image}
+              />;
+            })
+    )
+    // if (this.checkKeyword(blogs, this.state) == true)
+    //   {
+    //     console.log('checkKeyword sez true')
+    //     return(
         
-          this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
-            return  <Blogbox key={blog.title}
-            keyword={blog.keyword}
-            title={blog.title}
-            date={blog.date}
-            content={blog.content}
-            image={blog.image}
-            />;
-          })
+    //       this.sortBlogs().filter(chosenBlogs => chosenBlogs.keyword === this.state.keyword).map(blog => {
+    //         return  <Blogbox key={blog.title}
+    //         keyword={blog.keyword}
+    //         title={blog.title}
+    //         date={blog.date}
+    //         content={blog.content}
+    //         image={blog.image}
+    //         />;
+    //       })
 
-        )
-      }
-    else
-        {
-          return(
-            <div>
-              <Catpic />
-            </div>
-          )
-        }
+    //     )
+    //   }
+    // else
+    //     {
+    //       return(
+    //         <div>
+    //           <Catpic />
+    //         </div>
+    //       )
+    //     }
 
   }
 
@@ -108,7 +119,9 @@ class App extends React.Component {
 
         {/* {this.state.keyword === 'default' && <Catpic />} */}
         {/* {this.state.keyword !== 'default' && this.showBlogs()} */}
-        {this.showBlogs()}
+        {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
+        {/* {this.checkKeyword(blogs, this.state) ? console.log('A') : console.log('B')} */}
+        {console.log(this.showBlogs())}
         
                 
       </div>
