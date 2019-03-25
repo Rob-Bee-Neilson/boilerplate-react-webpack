@@ -2,10 +2,10 @@ import React from 'react';
 
 const Image = props => (
 
-  <img src={`${props.image}`} />
-  // <img src={require(`${props.image}`)} />
-    // alt={props.alt} className='pic-here' />
-
+  <div className='boarder-image'>
+    <img src={`${props.image}`} alt={`${props.alt}`} />
+  </div>
+  
 )
 
 export default Image

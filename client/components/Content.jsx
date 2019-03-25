@@ -2,7 +2,7 @@ import React from 'react';
 
 const Content = props => (
 
-  <div className='boarder'>
+  <div className='boarder-content'>
     <span className='content'>{props.content}</span>
   </div>
 
