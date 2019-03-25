@@ -83,7 +83,8 @@ class App extends React.Component {
 
       <div className='container'>
 
-        <h1>Rob's Blog v1.0</h1>
+        <h1>Rob's Blog v1.0</h1><br></br>
+        <h3>(v1.0 = get something up and working)</h3><br></br>
         <p>Welcome to Rob's Blog v1.0, to read some blog posts enter a keyword below...<br></br></p>
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
