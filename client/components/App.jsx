@@ -22,6 +22,7 @@ class App extends React.Component {
 
   }
 
+  //display blogs from newest to oldest
   sortBlogs() {
   
     let arr= blogs.reverse();
@@ -83,7 +84,7 @@ class App extends React.Component {
       <div className='container'>
 
         <h1>Rob's Blog v1.0</h1>
-        <p>wazzup<br></br></p>
+        <p>Welcome to Rob's Blog v1.0, to read some blog posts enter a keyword below...<br></br></p>
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
                               
