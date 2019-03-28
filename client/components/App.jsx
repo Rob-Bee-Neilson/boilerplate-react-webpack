@@ -5,6 +5,7 @@ import blogs from '../../server/public/blogs';
 import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
 import Catpic from './Catpic';
+import Geekdeets from './Geekdeets';
 
 
 class App extends React.Component {
@@ -88,6 +89,7 @@ class App extends React.Component {
         <p>Welcome to Rob's Blog v1.0, to read some blog posts enter a keyword below...<br></br></p>
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
+        {<Geekdeets />}
                               
       </div>
 
