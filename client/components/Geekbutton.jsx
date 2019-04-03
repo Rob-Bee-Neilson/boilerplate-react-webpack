@@ -13,12 +13,10 @@ export default class Geekbutton extends React.Component {
     handleClick = () => {
         this.setState({
             toggle: !this.state.toggle
-        }, () => {
-
+            }, () => {
             if (this.state.toggle === true) {
-                console.log('state is true')
                 return <Geekdeets />
-            } else {console.log('state is false')}
+            }
         });
 
     }

@@ -6,6 +6,7 @@ import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
 import Catpic from './Catpic';
 import Geekbutton from './Geekbutton';
+import Mainheader from './Mainheader';
 
 
 class App extends React.Component {
@@ -84,8 +85,7 @@ class App extends React.Component {
 
       <div className='container'>
 
-        <h1>Rob's Blog v1.0</h1><br></br>
-        <h3>(v1.0 = get something up and working)</h3><br></br>
+        {<Mainheader />}
         {<Geekbutton />}
         <p>Welcome to Rob's Blog v1.0, to read some blog posts enter a keyword below...<br></br></p>
         <Filterbox updateState={this.updateState}/>
