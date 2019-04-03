@@ -10,15 +10,17 @@ export default class Geekbutton extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
-        this.setState(newState => ({
+    handleClick = () => {
+        this.setState({
             toggle: !this.state.toggle
-        }));
+        }, () => {
 
-        if (this.state === true) {
-            console.log('state is true')
-            return <Geekdeets />
-        } else {console.log('state is false')}
+            if (this.state.toggle === true) {
+                console.log('state is true')
+                return <Geekdeets />
+            } else {console.log('state is false')}
+        });
+
     }
 
     render() {
@@ -27,6 +29,8 @@ export default class Geekbutton extends React.Component {
                 <button onClick={this.handleClick}>
                 {this.state.toggle ? 'hide geek deets' : 'Show geek deets'}
                 </button>
+
+                {this.state.toggle && <Geekdeets />}
             </div>
         );
     }
