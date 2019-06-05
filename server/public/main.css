@@ -40,6 +40,21 @@ h2 {
   align-items: center;
   width: 100%;
 }
+
+.geek-button {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.boarder-geek {
+  align-items: center;
+  background-color: gold;
+}
+
 /* 
 .spinner {
   margin-top: 5rem;
