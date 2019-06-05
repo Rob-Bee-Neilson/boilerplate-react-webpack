@@ -87,7 +87,13 @@ class App extends React.Component {
 
         {<Mainheader />}
         {<Geekbutton />}
-        <p>Welcome to Rob's Blog v1.0, to read some blog posts enter a keyword below...<br></br></p>
+        <p>Welcome to Rob's Blog v1.0<br></br>
+        Sample Keywords:<br></br>
+        - public<br></br>
+        - robbie<br></br>
+        - dev<br></br>
+        - art<br></br>
+        To read some blog posts enter a keyword below...<br></br></p>
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
                                       
