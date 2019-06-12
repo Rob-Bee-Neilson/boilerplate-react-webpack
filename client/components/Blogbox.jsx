@@ -8,19 +8,19 @@ const Blogbox = props => {
 
   return(
 
-    <div className='blogwrapper'>
+    <div className='blog-wrapper'>
 
-      <div className='header'>
+      <div className='blog-header'>
         <Header title={props.title} date={props.date} />
-      </div>
+      </div><br></br>
 
-      <div className='content'>
+      <div className='blog-content'>
         <Content content={props.content} />
-      </div>
+      </div><br></br>
 
-      <div className='image'>
+      <div className='blog-image'>
         <Image image={props.image} alt={props.alt} />
-      </div>
+      </div><br></br>
 
     </div>
 

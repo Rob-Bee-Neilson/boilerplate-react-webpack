@@ -5,6 +5,8 @@ import blogs from '../../server/public/blogs';
 import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
 import Catpic from './Catpic';
+import Geekbutton from './Geekbutton';
+import Mainheader from './Mainheader';
 
 
 class App extends React.Component {
@@ -83,12 +85,20 @@ class App extends React.Component {
 
       <div className='container'>
 
-        <h1>Rob's Blog v1.0</h1><br></br>
-        <h3>(v1.0 = get something up and working)</h3><br></br>
-        <p>Welcome to Rob's Blog v1.0, to read some blog posts enter a keyword below...<br></br></p>
+        {<Mainheader />}
+        {<Geekbutton />}
+        
+        <p>Welcome to Rob's Blog v1.0<br></br><br></br>
+        To read some blog posts enter a keyword below...<br></br><br></br>
+        Sample Keywords:<br></br>
+        - public<br></br>
+        - robbie<br></br>
+        - dev<br></br>
+        - art<br></br><br></br></p>
+
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
-                              
+                                      
       </div>
 
     )
