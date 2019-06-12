@@ -33,6 +33,10 @@ h2 {
   min-height: 207px;
 }
 
+.boarder-image {
+  max-height: 200px;
+}
+
 .fillerimage {
   display: flex;
   justify-content: space-between;
