@@ -5,7 +5,7 @@ module.exports = [
         title: 'Title one',
         date: '12/05/19',
         content: 'aah ahh aah',
-        image: '/images/download.jpg',
+        image: '/images/1.jpg',
         alt: ''
       },
       {
@@ -14,7 +14,7 @@ module.exports = [
         title: 'Title two',
         date: '13/05/19',
         content: 'b b b b b ',
-        image: '/images/download2.jpg',
+        image: '/images/2.jpg',
         alt: ''
       },
       {
@@ -23,7 +23,7 @@ module.exports = [
         title: 'Title three',
         date: '14/05/19',
         content: 'c c c c c c',
-        image: '/images/download.jpg',
+        image: '/images/3.jpg',
         alt: ''
       },
       {
@@ -32,7 +32,7 @@ module.exports = [
         title: 'Title 4',
         date: '15/05/19',
         content: 'd d d d ',
-        image: '/images/download.jpg',
+        image: '/images/4.jpg',
         alt: ''
       },
       {
@@ -41,7 +41,7 @@ module.exports = [
         title: 'Title 5',
         date: '16/05/19',
         content: 'e e e e e e',
-        image: '/images/download2.jpg',
+        image: '/images/5.jpg',
         alt: ''
       },
       {
@@ -50,7 +50,7 @@ module.exports = [
         title: 'Title 6',
         date: '17/05/19',
         content: 'f f f f f',
-        image: '/images/download.jpg',
+        image: '/images/6.jpg',
         alt: ''
       },
       {
@@ -59,7 +59,7 @@ module.exports = [
         title: 'Title 7',
         date: '18/05/19',
         content: 'g g g g g g',
-        image: '/images/download.jpg',
+        image: '/images/7.jpg',
         alt: 'boop'
       },
       {
@@ -68,7 +68,7 @@ module.exports = [
         title: 'Title 8',
         date: '19/05/19',
         content: 'h h h h h',
-        image: '/images/download2.jpg',
+        image: '/images/8.jpg',
         alt: ''
       },
       {
@@ -77,7 +77,7 @@ module.exports = [
         title: 'Title 9',
         date: '20/05/19',
         content: 'i i i i ',
-        image: '/images/download.jpg',
+        image: '/images/9.jpg',
         alt: ''
       }
 ]
