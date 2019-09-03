@@ -94,8 +94,8 @@ class App extends React.Component {
         {<Geekbutton />}
 
         <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+          Hello World
+        </Button>
         
         <p>Welcome to Rob's Blog v1.0<br></br><br></br>
         To read some blog posts enter a keyword below...<br></br><br></br>
