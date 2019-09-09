@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 
 import blogs from '../../server/public/blogs';
 
+import Headermain from './Headermain';
 import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
 import Catpic from './Catpic';
@@ -86,7 +87,7 @@ class App extends React.Component {
 
       <div className='container'>
 
-      
+        <Headermain />
           <h1>Rob's Blog v1.0</h1>
           <h2>(v1.0 = get something up and working)</h2>
         
