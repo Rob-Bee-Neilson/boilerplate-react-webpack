@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Button from '@material-ui/core/Button';
+
 import Geekdeets from './Geekdeets'
 
 export default class Geekbutton extends React.Component {
@@ -24,11 +26,13 @@ export default class Geekbutton extends React.Component {
     render() {
         return (
             <div className='geek-button'>
-                <button onClick={this.handleClick}>
-                {this.state.toggle ? 'hide geek deets' : 'Show geek deets'}
-                </button>
-
+                
+                <Button variant="contained" color="primary" onClick={this.handleClick}>
+                    {this.state.toggle ? 'hide geek deets' : 'Show geek deets'}
+                </Button>
+                
                 {this.state.toggle && <Geekdeets />}
+
             </div>
         );
     }

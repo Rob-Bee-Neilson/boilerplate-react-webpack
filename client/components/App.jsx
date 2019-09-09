@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
 import blogs from '../../server/public/blogs';
 
 import Headermain from './Headermain';
@@ -9,6 +7,7 @@ import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
 import Catpic from './Catpic';
 import Geekbutton from './Geekbutton';
+import Welcome from './Welcome';
 
 
 class App extends React.Component {
@@ -87,24 +86,20 @@ class App extends React.Component {
 
       <div className='container'>
 
-        <Headermain />
-          <h1>Rob's Blog v1.0</h1>
-          <h2>(v1.0 = get something up and working)</h2>
-        
-        
+        <Headermain />        
+        <br></br>
         {<Geekbutton />}
-
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
+        <br></br>
+        <Welcome />
         
-        <p>Welcome to Rob's Blog v1.0<br></br><br></br>
+        
+        {/* <p>Welcome to Rob's Blog v1.0<br></br><br></br>
         To read some blog posts enter a keyword below...<br></br><br></br>
         Sample Keywords:<br></br>
         - public<br></br>
         - robbie<br></br>
         - dev<br></br>
-        - art<br></br><br></br></p>
+        - art<br></br><br></br></p> */}
 
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
