@@ -39,18 +39,3 @@ export default class Geekbutton extends React.Component {
 
 
 }
-
-  
-//     render() {
-//       return (
-//         <button onClick={this.handleClick}>
-//           {this.state.isToggleOn ? 'ON' : 'OFF'}
-//         </button>
-//       );
-//     }
-//   }
-  
-//   ReactDOM.render(
-//     <Toggle />,
-//     document.getElementById('root')
-//   );

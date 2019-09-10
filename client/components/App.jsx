@@ -85,22 +85,13 @@ class App extends React.Component {
     return (
 
       <div className='container'>
-
+        
         <Headermain />        
         <br></br>
-        {<Geekbutton />}
+        <Geekbutton />
         <br></br>
         <Welcome />
-        
-        
-        {/* <p>Welcome to Rob's Blog v1.0<br></br><br></br>
-        To read some blog posts enter a keyword below...<br></br><br></br>
-        Sample Keywords:<br></br>
-        - public<br></br>
-        - robbie<br></br>
-        - dev<br></br>
-        - art<br></br><br></br></p> */}
-
+        <br></br>
         <Filterbox updateState={this.updateState}/>
         {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
                                       
