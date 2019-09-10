@@ -54,11 +54,11 @@ const Blogbox = props => {
                     
                     <CardContent>
                       
-                      <Typography className={'x2'} color="textSecondary" gutterBottom>
+                      <Typography className={'x2'} color="textSecondary" gutterBottom component={'span'} variant={'body2'}>
                         <Header title={props.title} date={props.date} />
                       </Typography>
                       
-                      <Typography>
+                      <Typography component={'span'} variant={'body2'}>
                         <Content content={props.content} />
                       </Typography>
 
