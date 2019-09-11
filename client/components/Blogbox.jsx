@@ -54,6 +54,14 @@ const Blogbox = props => {
                     
                     <CardContent>
                       
+                    <CardMedia
+                        component="img"
+                        image={`${props.image}`}
+                        title={`${props.title}`}
+                        alt={`${props.alt}`}
+                        height="100%"              
+                      />
+
                       <Typography className={'x2'} color="textSecondary" gutterBottom component={'span'} variant={'body2'}>
                         <Header title={props.title} date={props.date} />
                       </Typography>
@@ -62,13 +70,6 @@ const Blogbox = props => {
                         <Content content={props.content} />
                       </Typography>
 
-                      <CardMedia
-                        component="img"
-                        image={`${props.image}`}
-                        title={`${props.title}`}
-                        alt={`${props.alt}`}
-                        height="100%"              
-                      />
                     </CardContent>
 
                   </CardActionArea>
