@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Box from '@material-ui/core/Box';
+
 import blogs from '../../server/public/blogs';
 
 import Headermain from './Headermain';
@@ -84,17 +86,29 @@ class App extends React.Component {
     
     return (
 
-      <div className='container'>
+      <div className='container' style={{ width: '100%' }}>
         
-        <Headermain />        
-        <br></br>
-        <Geekbutton />
-        <br></br>
-        <Welcome />
-        <br></br>
-        <Filterbox updateState={this.updateState}/>
-        {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
-                                      
+        <Headermain />
+
+        <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+        
+          <Geekbutton />
+          
+        </Box>
+
+        <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+        
+          <Welcome />
+          
+        </Box>
+
+        <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+        
+          <Filterbox updateState={this.updateState} />
+          {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
+          
+        </Box>
+                                    
       </div>
 
     )
