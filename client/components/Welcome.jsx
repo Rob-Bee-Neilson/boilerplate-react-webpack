@@ -15,21 +15,27 @@ export default function Welcome() {
 
   return (
     <div>
+
       <Paper className={classes.root}>
+        
         <Typography variant="h5" component="h3">
             Welcome to Rob's Blog v1.0
         </Typography>
+        
         <Typography component="p">
             To read some blog posts enter a keyword below...<br></br><br></br>
             Sample Keywords:
         </Typography>
+        
         <Typography>
             - public<br></br>
             - robbie<br></br>
             - dev<br></br>
             - art
         </Typography>
+      
       </Paper>
+    
     </div>
   );
 }
