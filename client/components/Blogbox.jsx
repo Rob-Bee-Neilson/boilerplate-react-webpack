@@ -49,31 +49,33 @@ const Blogbox = props => {
           <Grid container justify="center" direction="row" alignItems="center" spacing={spacing}>
             {[0].map(value => (
               <Grid key={value} item>
+                
                 <Card className={classes.card}>
                   <CardActionArea>
                     
                     <CardContent>
                       
-                    <CardMedia
-                        component="img"
-                        image={`${props.image}`}
-                        title={`${props.title}`}
-                        alt={`${props.alt}`}
-                        height="100%"              
-                      />
+                      <CardMedia
+                          component="img"
+                          image={`${props.image}`}
+                          title={`${props.title}`}
+                          alt={`${props.alt}`}
+                          height="100%"              
+                        />
 
-                      <Typography className={'x2'} color="textSecondary" gutterBottom component={'span'} variant={'body2'}>
-                        <Header title={props.title} date={props.date} />
-                      </Typography>
-                      
-                      <Typography component={'span'} variant={'body2'}>
-                        <Content content={props.content} />
-                      </Typography>
+                        <Typography className={'x2'} color="textSecondary" gutterBottom component={'span'} variant={'body2'}>
+                          <Header title={props.title} date={props.date} />
+                        </Typography>
+                        
+                        <Typography component={'span'} variant={'body2'}>
+                          <Content content={props.content} />
+                        </Typography>
 
                     </CardContent>
 
                   </CardActionArea>
                 </Card>
+                
               </Grid>
             ))}
           </Grid>

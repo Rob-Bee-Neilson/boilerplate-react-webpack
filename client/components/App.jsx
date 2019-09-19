@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 import blogs from '../../server/public/blogs';
 
@@ -81,7 +82,7 @@ class App extends React.Component {
     
   }
 
-  //new function to display holder image or blogs (after keyword submit) here
+  
   render() {
     
     return (
@@ -104,9 +105,13 @@ class App extends React.Component {
 
         <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
         
-          <Filterbox updateState={this.updateState} />
-          {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
+          <Grid container direction="column" justify="center" alignItems="center">
+
+            <Filterbox updateState={this.updateState} />
+            {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
           
+          </Grid>
+
         </Box>
                                     
       </div>
