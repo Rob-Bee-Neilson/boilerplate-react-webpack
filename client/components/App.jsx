@@ -1,12 +1,16 @@
-import React from 'react'
+import React from 'react';
+
+import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 import blogs from '../../server/public/blogs';
 
+import Headermain from './Headermain';
 import Blogbox from './Blogbox';
 import Filterbox from './Filterbox';
 import Catpic from './Catpic';
 import Geekbutton from './Geekbutton';
-import Mainheader from './Mainheader';
+import Welcome from './Welcome';
 
 
 class App extends React.Component {
@@ -78,27 +82,38 @@ class App extends React.Component {
     
   }
 
-  //new function to display holder image or blogs (after keyword submit) here
+  
   render() {
     
     return (
 
-      <div className='container'>
-
-        {<Mainheader />}
-        {<Geekbutton />}
+      <div className='container' style={{ width: '100%' }}>
         
-        <p>Welcome to Rob's Blog v1.0<br></br><br></br>
-        To read some blog posts enter a keyword below...<br></br><br></br>
-        Sample Keywords:<br></br>
-        - public<br></br>
-        - robbie<br></br>
-        - dev<br></br>
-        - art<br></br><br></br></p>
+        <Headermain />
 
-        <Filterbox updateState={this.updateState}/>
-        {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
-                                      
+        <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+        
+          <Geekbutton />
+          
+        </Box>
+
+        <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+        
+          <Welcome />
+          
+        </Box>
+
+        <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+        
+          <Grid container direction="column" justify="center" alignItems="center">
+
+            <Filterbox updateState={this.updateState} />
+            {this.checkKeyword(blogs, this.state) ? this.showBlogs() : <Catpic />}
+          
+          </Grid>
+
+        </Box>
+                                    
       </div>
 
     )

@@ -1,10 +1,13 @@
+
+
+
 /* 505160: dark grey
  * 68829e: lighter grey
  * aebd38: moss green
  * 598234: deeper green
  */
 
-body {
+/* body {
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -18,19 +21,12 @@ h2 {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
 }
 
 .blogwrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 200px;
   max-width: 100%;
-  min-height: 207px;
+  min-width: 100px;
 }
 
 .boarder-image {
@@ -38,16 +34,10 @@ h2 {
 }
 
 .fillerimage {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
 }
 
 .geek-button {
-  display: flex;
   justify-content: space-between;
   margin: auto;
   flex-direction: column;
@@ -58,8 +48,9 @@ h2 {
 .boarder-geek {
   align-items: center;
   background-color: gold;
-}
+} */
 
+/* ------------------------------------------------------------- */
 /* 
 .spinner {
   margin-top: 5rem;

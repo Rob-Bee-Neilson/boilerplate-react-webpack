@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Box from '@material-ui/core/Box';
+
 export default class Filterbox extends React.Component {
     constructor(props) {
         super(props)
@@ -33,15 +35,18 @@ export default class Filterbox extends React.Component {
 
     render() {
         return(
+            <Box display="flex" flexWrap="wrap" justifyContent="center" m={1} p={1} bgcolor="background.paper">
+                
+                <form onSubmit={this.onSubmit}>
 
-            <form onSubmit={this.onSubmit}>
+                    <label>
+                        <input onChange={this.updateDetails} type="text" name="keyword" placeholder="enter keyword"/>
+                    </label>
+                        <input type="submit" value="Submit" />
 
-                <label>
-                    <input onChange={this.updateDetails} type="text" name="keyword" placeholder="enter keyword"/>
-                </label>
-                    <input type="submit" value="Submit" />
-
-            </form>
+                </form>
+                
+            </Box>
         )
     }
 
