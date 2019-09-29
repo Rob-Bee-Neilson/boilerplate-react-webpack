@@ -45,7 +45,7 @@ export default function ButtonAppBar() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
         >
-          <MenuItem onClick={handleClose}>Doesn't work. Just for show</MenuItem>
+          <MenuItem onClick={handleClose}>Bet you thought this did something huh?</MenuItem>
       </Menu>
 
       <AppBar position="static">
@@ -57,7 +57,7 @@ export default function ButtonAppBar() {
           </IconButton>
 
           <Typography variant="h6" className={classes.title}>
-            Rob's Blog v1.0
+            Rob's Blog v1.1
           </Typography>
 
           {/* <Button color="inherit">Login</Button> */}

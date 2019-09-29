@@ -25,7 +25,7 @@ export default function Geekdeets() {
         </Typography>
 
         <Typography component="p">
-          v1.0:  React JS  (MVP - get it up and running!)
+          v1.1:  React JS  (up and running with basic design)
         </Typography>
         <br></br>
 
